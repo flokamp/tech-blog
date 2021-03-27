@@ -1,8 +1,8 @@
 // Dependencies
 // =============================================================
 const express = require("express");
+const controllers = require("./controllers");
 const exphbs = require("express-handlebars");
-const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const path = require("path");
 const session = require("express-session");
@@ -36,7 +36,7 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(routes);
+app.use(controllers);
 
 // Turn on connection to db and server
 // =============================================================
