@@ -87,7 +87,6 @@ button:hover {
 /* view posts styling */
 .post-list {
 	border-radius: 8px;
-	background-color: white;
 }
 
 main {
@@ -95,10 +94,10 @@ main {
 }
 
 .post {
-	padding: 2%;
-
+	padding: 2% 8% 1% 8%;
 	line-height: 150%;
 }
+
 .post:hover {
 	background-color: rgb(236, 243, 248);
 }
