@@ -8,7 +8,6 @@ html {
 	margin: 0;
 	font-family: sans-serif;
 	color: #333;
-	background-color: #f6f6f6;
 }
 
 a {
@@ -19,6 +18,55 @@ a {
 
 a:hover {
 	color: black;
+}
+
+/*************** header styling ***************/
+header {
+	background-color: rgb(58, 58, 58);
+	color: white;
+	padding: 0 8%;
+	font-size: 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header a {
+	color: white;
+}
+
+header a:hover {
+	color: rgb(190, 190, 190);
+}
+
+a#login {
+	font-weight: bold;
+	font-size: 20px;
+	border: 2px solid white;
+	padding: 4px 12px;
+	border-radius: 24px;
+}
+
+a#login:hover {
+	border: 2px solid rgb(190, 190, 190);
+}
+
+.btn-no-style {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 100%;
+	font-weight: bold;
+	transition: color 0.1s;
+	margin-left: 16px;
+}
+
+.btn-no-style:hover {
+	background: none;
+	color: rgb(190, 190, 190);
 }
 
 button {
@@ -36,9 +84,23 @@ button:hover {
 	background-color: #3486eb;
 }
 
+/* view posts styling */
 .post-list {
-	margin: 0;
-	padding: 0;
+	border-radius: 8px;
+	background-color: white;
+}
+
+main {
+	flex: 1;
+}
+
+.post {
+	padding: 2%;
+
+	line-height: 150%;
+}
+.post:hover {
+	background-color: rgb(236, 243, 248);
 }
 
 textarea,
@@ -76,66 +138,12 @@ form label {
 	flex-direction: column;
 }
 
-header {
-	padding: 0 8%;
-	font-size: 1em;
-	border-bottom: 1px solid #ccc;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-header h1 {
-	font-size: 1.6em;
-}
-
-main {
-	flex: 1;
-	padding: 4% 12%;
-}
-
-.btn-no-style {
-	background: none;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	text-decoration: none;
-	color: #225ca3;
-	font-size: 100%;
-	font-weight: bold;
-	transition: color 0.1s;
-	margin-left: 16px;
-}
-
-a#login {
-	background: #444;
-	color: white;
-	padding: 8px 16px;
-	cursor: pointer;
-	text-decoration: none;
-	font-size: 100%;
-	font-weight: bold;
-	transition: color 0.1s;
-	margin-left: 16px;
-	border-radius: 32px;
-}
-
-.btn-no-style:hover {
-	background: none;
-	color: #3486eb;
-}
-
 .delete-post-btn {
 	background-color: #d41414;
 }
 
 .delete-post-btn:hover {
 	background-color: #ff643d;
-}
-
-.post {
-	margin-bottom: 2%;
-	line-height: 150%;
 }
 
 .title {
@@ -178,7 +186,13 @@ a#login {
 
 h2 {
 	font-size: 0.8em;
-	margin: 0 0 16px 0;
+	margin: 0 0 4px 0;
+}
+
+p {
+	width: 100%;
+	font-size: 14px;
+	text-align: right;
 }
 
 label {
@@ -193,6 +207,15 @@ input#post-title {
 	width: 100%;
 	padding: 12px;
 	border: 2px solid rgb(209, 209, 209);
+}
+
+div.contents {
+	font-size: 16px;
+	margin-bottom: 12px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 textarea#post-contents {
