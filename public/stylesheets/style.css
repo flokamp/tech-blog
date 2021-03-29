@@ -4,6 +4,7 @@
 
 body,
 html {
+	width: 100%;
 	height: 100%;
 	margin: 0;
 	font-family: sans-serif;
@@ -29,6 +30,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 32px;
 }
 
 header a {
@@ -70,18 +72,19 @@ a#login:hover {
 }
 
 button {
-	background-color: #225ca3;
+	width: 100%;
+	background-color: rgb(71, 71, 71);
 	border: 0;
-	padding: 1%;
+	padding: 2%;
 	color: white;
 	font-weight: bold;
 	transition: background-color 0.1s;
 	cursor: pointer;
-	border-radius: 5px;
 }
 
 button:hover {
-	background-color: #3486eb;
+	background-color: #000000;
+	color: white;
 }
 
 /* view posts styling */
@@ -121,10 +124,6 @@ textarea {
 
 form > div {
 	margin-bottom: 2%;
-}
-
-form label {
-	display: block;
 }
 
 .wrapper {
@@ -244,9 +243,11 @@ p {
 }
 
 label {
-	font-size: 0.8em;
+	color: black;
+	font-size: 1em;
 	float: left;
-	width: 48px;
+	text-align: left;
+	margin-bottom: 8px;
 }
 
 input#post-title {
@@ -283,4 +284,48 @@ footer {
 	justify-content: center;
 	padding: 1%;
 	font-size: 110%;
+}
+
+/* login form */
+
+.login-page {
+	border: 2px solid black;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.login-form,
+.signup-form {
+	padding: 8px;
+}
+
+.tabs {
+	padding-top: 32px;
+	display: flex;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.tab input {
+	height: 48px;
+	width: 200px;
+}
+
+.login-form div,
+.signup-form div {
+	margin: 0 auto;
+	text-align: center;
+	padding: 24px;
+}
+
+.login-form input,
+.signup-form input {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.tab-button {
+	color: black;
+	background-color: white;
+	font-size: 24px;
 }
