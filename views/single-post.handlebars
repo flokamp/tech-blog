@@ -1,6 +1,10 @@
     {{> post-info post }}
 
 {{#if loggedIn}}
+<form class="reaction-form">
+<button name="react" id="&#x1F981;" type="submit" class="btn">&#x1F981;</button>
+</form>
+
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -11,9 +15,11 @@
   </div>
 </form>
 {{/if}}
-
+{{> reactions post.reactions}}
 {{> comments post.comments}}
+
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
+<script src="/javascript/reaction.js"></script>
 {{/if}}
