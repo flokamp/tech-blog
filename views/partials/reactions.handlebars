@@ -1,9 +1,13 @@
-<div class="reactions">
+<div class="comments">
   {{#each this}}
-  <section class="reactions">
-    <div class="text">
-      {{reaction_text}} on {{format_date created_at}}
+  <section class="comment">
+        <div class="text">
+      {{reaction_text}}
+    </div>
+    <div class="meta">
+      {{user.username}} on {{format_date created_at}}
     </div>
   </section>
+        <hr>
   {{/each}}
 </div>
