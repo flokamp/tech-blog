@@ -1,19 +1,32 @@
-    {{> post-info post }}
-
+<article class="post-full">
+  <div class="post-details">
+  <div class="title">
+    <h2>{{ post.title}}</h2>
+  </div>
+      <div class="contents">{{post.contents}}</div>
+</div>
 {{#if loggedIn}}
-<form class="reaction-form">
-<button name="react" id="&#x1F981;" type="submit" class="btn">&#x1F981;</button>
+<div class="form-interaction">
+  <form class="reaction-form">
+<button name="react" class="reaction" id="&#x1F600;" type="submit" class="btn">&#x1F600;</button>
+<button name="react" class="reaction" id="&#x1F62D;" type="submit" class="btn">&#x1F62D;</button>
+<button name="react" class="reaction" id="&#x1F633;" type="submit" class="btn">&#x1F633;</button>
+<button name="react" class="reaction" id="&#x1F610;" type="submit" class="btn">&#x1F610;</button>
+<button name="react" class="reaction" id="&#x1F616;" type="submit" class="btn">&#x1F616;</button>
+<button name="react" class="reaction" id="&#x1F621;" type="submit" class="btn">&#x1F621;</button>
 </form>
-
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button class="add-comment" type="submit">add comment</button>
   </div>
 </form>
+
+
+</div>
 {{/if}}
 {{> reactions post.reactions}}
 {{> comments post.comments}}
@@ -23,3 +36,4 @@
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/reaction.js"></script>
 {{/if}}
+      </article>

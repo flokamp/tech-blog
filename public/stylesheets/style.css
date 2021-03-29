@@ -155,8 +155,35 @@ form label {
 	margin: -1.5% 0 2% 0;
 }
 
-.comment-form {
-	margin-bottom: 5%;
+/* full post details */
+.post-full {
+	padding: 2% 8% 1% 8%;
+	line-height: 150%;
+}
+
+.post-details {
+	margin-bottom: 24px;
+}
+
+/* form interactions */
+
+.comment-form textarea {
+	width: 100%;
+}
+
+.add-comment {
+	background-color: blue;
+}
+
+button.reaction {
+	width: 64px;
+	height: 80px;
+	font-size: 32px;
+	background-color: white;
+}
+
+button.reaction:hover {
+	text-shadow: 2px 2px 4px rgb(180, 180, 180);
 }
 
 .comment {
@@ -168,10 +195,17 @@ form label {
 	background-color: #fff5eb;
 }
 
-.comment .meta {
+.meta {
 	font-size: 90%;
 	margin-bottom: 0.5%;
-	opacity: 0.6;
+	opacity: 0.8;
+	text-align: right;
+}
+
+.comment-count,
+.reaction-count {
+	padding-left: 12px;
+	display: inline;
 }
 
 /* create post styling */
@@ -208,7 +242,7 @@ input#post-title {
 	border: 2px solid rgb(209, 209, 209);
 }
 
-div.contents {
+div.contents-preview {
 	font-size: 16px;
 	margin-bottom: 12px;
 	width: 100%;

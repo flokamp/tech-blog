@@ -59,7 +59,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
 			},
 			{
 				model: Reaction,
-				attributes: ["id", "reaction_text", "post_id", "user_id"],
+				attributes: ["id", "reaction_text", "post_id", "user_id", "created_at"],
 				include: {
 					model: User,
 					attributes: ["username"],

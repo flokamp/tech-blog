@@ -32,6 +32,14 @@ router.get("/:id", (req, res) => {
 					attributes: ["title"],
 				},
 			},
+			{
+				model: Reaction,
+				attributes: ["id", "reaction_text", "created_at"],
+				include: {
+					model: Post,
+					attributes: ["title"],
+				},
+			},
 		],
 	})
 		.then((dbUserData) => {

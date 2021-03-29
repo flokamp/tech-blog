@@ -3,11 +3,10 @@
   <div class="title">
     <h2>{{title}}</h2>
   </div>
-      <div class="contents">{{contents}}</div>
+      <div class="contents-preview">{{contents}}</div>
   <div class="meta">
-    <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
-    <p>{{reactions.length}} {{format_plural "reaction" reactions.length}}</p>
-    
+    <div class="comment-count">{{comments.length}} {{format_plural "comment" comments.length}}</div>
+    <div class="reaction-count">{{reactions.length}} {{format_plural "reaction" reactions.length}}</div>
   </div>
   </a>
 </article>
