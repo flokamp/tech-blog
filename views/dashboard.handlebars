@@ -1,7 +1,4 @@
-<section class="create-post">
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
+<form class="post-form">
     <div>
       <input type="text" id="post-title" name="post-title" placeholder="Your title" />
     </div>
@@ -11,20 +8,22 @@
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
-</section>
+<hr>
+  <h3>My Posts</h3>
 
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+ {{#each posts as |post|}}
+<article class="post">
+  <a href="/dashboard/edit/{{post.id}}" target="_blank">
+  <div class="title">
+    <h2>{{title}}</h2>
+  </div>
+      <div class="contents-preview">{{contents}}</div>
+  <div class="meta">
+    <div class="comment-count">{{comments.length}} {{format_plural "comment" comments.length}}</div>
+    <div class="reaction-count">{{reactions.length}} {{format_plural "reaction" reactions.length}}</div>
+  </div>
+  </a>
+</article>
+  {{/each}}
 
 <script src="/javascript/add-post.js"></script>

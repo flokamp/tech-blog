@@ -1,7 +1,7 @@
 async function reactionFormHandler(event) {
 	event.preventDefault();
 
-	const reaction_text = document.querySelector('button[name="react"]').id;
+	const reaction_text = document.querySelector('button[id="$id"]').id;
 	const post_id = window.location.toString().split("/")[
 		window.location.toString().split("/").length - 1
 	];

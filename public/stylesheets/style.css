@@ -46,7 +46,6 @@ a#login {
 	font-size: 20px;
 	border: 2px solid white;
 	padding: 4px 12px;
-	border-radius: 24px;
 }
 
 a#login:hover {
@@ -73,9 +72,9 @@ a#login:hover {
 
 button {
 	width: 100%;
-	background-color: rgb(71, 71, 71);
+	background-color: rgb(60, 153, 60);
 	border: 0;
-	padding: 2%;
+	padding: 1%;
 	color: white;
 	font-weight: bold;
 	transition: background-color 0.1s;
@@ -83,7 +82,7 @@ button {
 }
 
 button:hover {
-	background-color: #000000;
+	background-color: green;
 	color: white;
 }
 
@@ -136,11 +135,12 @@ form > div {
 }
 
 .delete-post-btn {
-	background-color: #d41414;
+	background-color: white;
+	color: red;
 }
 
 .delete-post-btn:hover {
-	background-color: #ff643d;
+	background-color: red;
 }
 
 .title {
@@ -175,14 +175,8 @@ form > div {
 	padding: 0;
 }
 
-.add-comment {
-	width: 100%;
-	background-color: rgba(19, 146, 82, 0.856);
-	padding: 4px 12px;
-}
-
 button.reaction {
-	padding: 8px;
+	width: 32px;
 	font-size: 24px;
 	background-color: white;
 }
@@ -224,16 +218,18 @@ hr {
 }
 /* create post styling */
 .create-post {
-	background-color: white;
 	width: 100%;
 	padding: 2% 4%;
-	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-	border-radius: 8px;
 }
 
 h2 {
-	font-size: 0.8em;
-	margin: 0 0 4px 0;
+	font-size: 1em;
+	margin: 0 0 16px 0;
+}
+
+h3 {
+	font-size: 2em;
+	text-align: center;
 }
 
 p {
@@ -271,6 +267,7 @@ textarea#post-contents {
 	font-family: sans-serif;
 	font-size: 1em;
 	width: 100%;
+	padding: 12px;
 	border: 2px solid rgb(209, 209, 209);
 }
 
@@ -288,14 +285,14 @@ footer {
 
 /* login form */
 
-.login-page {
+.form-layout {
 	border: 2px solid black;
 	width: 60%;
 	margin: 0 auto;
 }
-
 .login-form,
-.signup-form {
+.signup-form,
+.post-form {
 	padding: 8px;
 }
 
@@ -312,7 +309,8 @@ footer {
 }
 
 .login-form div,
-.signup-form div {
+.signup-form div,
+.post-form {
 	margin: 0 auto;
 	text-align: center;
 	padding: 24px;
@@ -328,4 +326,17 @@ footer {
 	color: black;
 	background-color: white;
 	font-size: 24px;
+}
+
+.actions {
+	display: flex;
+}
+
+.cancel {
+	background-color: white;
+	color: black;
+}
+
+.button-row {
+	display: flex;
 }
