@@ -1,31 +1,35 @@
-<form class="post-form">
-<div class="mb-3">
-  <label for="post-title" class="form-label">Blog title</label>
-  <input type="text" class="form-control" id="post-title">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Content</label>
-  <textarea class="form-control" id="post-contents" rows="3"></textarea>
-</div>
-    <button type="submit" class="btn btn-primary">Create</button>
-</form>
+ <div class="row" style="height: 100%;">
+ <div class="col-4 p-0">  
+  <div class="sidebar-item bg-light p-5">
+      <form class="new-post-form pt-5">
+        <div class="mb-3">
+          <label for="post-title" class="form-label">Blog title</label>
+          <input type="text" class="form-control" name="post-title">
+        </div>
+        <div class="mb-3">
+          <label for="post-contents" class="form-label">Content</label>
+          <textarea id="mytextarea" class="form-control" name="post-contents" rows="12"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
 
-
-  <h3>My Posts</h3>
-
- {{#each posts as |post|}}
-<article class="post">
-  <a href="/dashboard/edit/{{post.id}}" target="_blank">
-  <div class="title">
-    <h2>{{title}}</h2>
   </div>
-      <div class="contents-preview">{{contents}}</div>
-  <div class="meta">
-    <div class="comment-count">{{comments.length}} {{format_plural "comment" comments.length}}</div>
-    <div class="reaction-count">{{reactions.length}} {{format_plural "reaction" reactions.length}}</div>
+</div>
+ <div class="col-8 p-0 bg-white">  
+{{#each posts as |post|}}
+<a href="/dashboard/edit/{{post.id}}" class="p-5 list-group-item list-group-item-action">
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{title}}</h5>
+   <i class="fas fa-pen"></i>
   </div>
-  </a>
-</article>
-  {{/each}}
+  <p class="mb-1 text-start">{{contents}}</p>
+  <small>{{comments.length}} {{format_plural "comment" comments.length}}</small>
+</a>
+{{/each}}
 
+</div>
+</div>
+
+
+ 
 <script src="/javascript/add-post.js"></script>

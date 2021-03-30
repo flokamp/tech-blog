@@ -1,39 +1,32 @@
-<article class="post-full">
-  <div class="post-details">
-  <div class="title">
-    <h2>{{ post.title}}</h2>
+     <a class="btn btn-light m-2" href="/"> &larr; All posts</a>
+
+<div class="p-5 list-group-item">
+  <div class="d-flex w-100 justify-content-between">
+    <h4 class="display-6">{{post.title}}</h1>
   </div>
-      <div class="contents">{{post.contents}}</div>
-</div>
+  <p class="lead text-start">{{post.contents}}</p>
+
+
+
 {{#if loggedIn}}
-<div class="form-interaction">
-  <form class="reaction-form">
-<button name="react" class="reaction" id="&#x1F600;" type="submit" class="btn">&#x1F600;</button>
-<button name="react" class="reaction" id="&#x1F62D;" type="submit" class="btn">&#x1F62D;</button>
-<button name="react" class="reaction" id="&#x1F633;" type="submit" class="btn">&#x1F633;</button>
-<button name="react" class="reaction" id="&#x1F610;" type="submit" class="btn">&#x1F610;</button>
-<button name="react" class="reaction" id="&#x1F616;" type="submit" class="btn">&#x1F616;</button>
-<button name="react" class="reaction" id="&#x1F621;" type="submit" class="btn">&#x1F621;</button>
-</form>
 <form class="comment-form">
-  <div class="comment-input">
-    <textarea name="comment-body"></textarea>
+  <div class="form-group row mt-4 mb-4">
+  <div class="col">
+    <input type="text" class="form-control" name="comment-body" placeholder="Leave a comment...">
   </div>
-
-  <div>
-    <button class="add-comment" type="submit">Submit comment</button>
+   <div class="col">
+  <button type="submit" class="btn btn-primary mb-2">Comment</button>
+  </div>
   </div>
 </form>
-
+{{/if}}
+</div>
+<div class="pt-5">
+{{> comments post.comments}}
+</div>
 
 </div>
-{{/if}}
-{{> reactions post.reactions}}
-{{> comments post.comments}}
-
-
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/reaction.js"></script>
 {{/if}}
-      </article>

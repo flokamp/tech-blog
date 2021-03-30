@@ -23,6 +23,7 @@ router.get("/:id", (req, res) => {
 			{
 				model: Post,
 				attributes: ["id", "title", "contents", "created_at"],
+				order: [["created_at", "DESC"]],
 			},
 			{
 				model: Comment,
@@ -31,6 +32,7 @@ router.get("/:id", (req, res) => {
 					model: Post,
 					attributes: ["title"],
 				},
+				order: [["created_at", "DESC"]],
 			},
 			{
 				model: Reaction,

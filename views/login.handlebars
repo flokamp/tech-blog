@@ -1,16 +1,16 @@
 
 <ul class="nav nav-pills justify-content-center m-4" id="pills-tab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link" aria-current="page" onclick="openTab('login-tab')">LOGIN</a>
+    <a class="nav-link" aria-current="page" href="#" onclick="openTab('login-tab')">LOGIN</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" onclick="openTab('signup-tab')">SIGNUP</a>
+    <a class="nav-link" href="#" onclick="openTab('signup-tab')">SIGNUP</a>
   </li>
 </ul>
 
 <div class="row p-5 m-5 justify-content-center">
 <div class="col-4 col-sm-3">
-<form id="login-tab" class="form login-tab">
+<form id="login-tab" class="form login-tab login-form">
   <div class="row mb-3">
     <label for="email" class="m-0 p-0 col-sm-2 col-form-label">Email</label>
 
@@ -23,30 +23,24 @@
       <input type="password" class="form-control" id="password-login">
 
   </div>
-  <button type="submit" class="btn btn-primary">login</button>
+  <button type="submit" class="btn btn-primary">Login</button>
 </form>
 
 
-<form id="signup-tab" class="form signup-tab" style="display:none">
+<form id="signup-tab" class="form signup-tab signup-form" style="display:none">
   <div class="row mb-3">
-    <label for="email" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="email-login">
-    </div>
+    <label for="email" class="m-0 p-0 col-sm-2 col-form-label">Email</label>
+      <input type="email" class="form-control" id="email-signup">
   </div>
   <div class="row mb-3">
-    <label for="email" class="col-sm-2 col-form-label">username</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="email-login">
-    </div>
+    <label for="email" class="m-0 p-0 col-sm-2 col-form-label">Username</label>
+      <input type="text" class="form-control" id="username-signup">
   </div>
   <div class="row mb-3">
-    <label for="password" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="password" class="form-control" id="password-login">
-    </div>
+    <label for="password" class="m-0 p-0 col-sm-2 col-form-label">Password</label>
+      <input type="password" class="form-control" id="password-signup">
   </div>
-  <button type="submit" class="btn btn-primary">login</button>
+  <button type="submit" class="btn btn-primary">Signup</button>
 </form>
 </div>
 </div>

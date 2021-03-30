@@ -1,8 +1,7 @@
 <a href="/post/{{id}}" class="p-5 list-group-item list-group-item-action">
-   <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{title}}</h5>
-    </div>
-    <p class="mb-1 text-start">{{contents}}</p>
-    <small>{{comments.length}} {{format_plural "comment" comments.length}}</small>
-    <small>{{reactions.length}} {{format_plural "reaction" reactions.length}}</small>
-  </a>
+  <div class="d-flex w-100 justify-content-between">
+    <h4>{{title}} &rarr;</h4>
+  </div>
+  <p class="lead text-start">{{contents}}</p>
+  <small><span class="badge">{{comments.length}} </span> {{format_plural "comment" comments.length}}</small>
+</a>
