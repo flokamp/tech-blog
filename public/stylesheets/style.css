@@ -11,6 +11,10 @@ html {
 	color: #333;
 }
 
+main {
+	width: 0 auto;
+}
+
 a {
 	text-decoration: none;
 	color: #333;
@@ -18,19 +22,6 @@ a {
 }
 
 /*************** header styling ***************/
-
-.btn-no-style {
-	background: none;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	text-decoration: none;
-	color: #ffffff;
-	font-size: 100%;
-	font-weight: bold;
-	transition: color 0.1s;
-	margin-left: 16px;
-}
 
 /* view posts styling */
 
@@ -115,11 +106,6 @@ p {
 	text-align: right;
 }
 
-label {
-	font-size: 1em;
-	float: left;
-}
-
 div.contents-preview {
 	font-size: 16px;
 	margin-bottom: 12px;
@@ -133,51 +119,11 @@ div.contents-preview {
 	margin-bottom: 5%;
 }
 
-footer {
-	border-top: 1px solid #ccc;
-	display: flex;
-	justify-content: center;
-	padding: 1%;
-	font-size: 110%;
-}
-
 /* login form */
 
-.form-layout {
-	border: 2px solid black;
-	width: 60%;
-	margin: 0 auto;
-}
-
-.tabs {
-	padding-top: 32px;
-	display: flex;
-	width: 50%;
-	margin: 0 auto;
-}
-
-.tab input {
-	height: 48px;
-	width: 200px;
-}
-
-.login-form div,
-.signup-form div,
-.post-form {
-	margin: 0 auto;
-	padding: 4% 10%;
-}
-
-.login-form input,
-.signup-form input {
-	margin: 0 auto;
-	width: 100%;
-}
-
-.tab-button {
-	color: black;
-	background-color: white;
-	font-size: 24px;
+div.collapse {
+	text-align: right;
+	float: right;
 }
 
 .actions {
