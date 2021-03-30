@@ -23,20 +23,10 @@ router.get("/:id", (req, res) => {
 			{
 				model: Post,
 				attributes: ["id", "title", "contents", "created_at"],
-				order: [["created_at", "DESC"]],
 			},
 			{
 				model: Comment,
 				attributes: ["id", "comment_text", "created_at"],
-				include: {
-					model: Post,
-					attributes: ["title"],
-				},
-				order: [["created_at", "DESC"]],
-			},
-			{
-				model: Reaction,
-				attributes: ["id", "reaction_text", "created_at"],
 				include: {
 					model: Post,
 					attributes: ["title"],
@@ -63,6 +53,7 @@ router.post("/", (req, res) => {
 		username: req.body.username,
 		email: req.body.email,
 		password: req.body.password,
+		avatar: req.body.avatar,
 	})
 		.then((dbUserData) => {
 			req.session.save(() => {

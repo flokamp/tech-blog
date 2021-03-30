@@ -38,6 +38,10 @@ User.init(
 				len: [4],
 			},
 		},
+		avatar: {
+			type: DataTypes.STRING,
+			allowNull: true,
+		},
 	},
 	{
 		hooks: {

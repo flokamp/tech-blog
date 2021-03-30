@@ -2,8 +2,8 @@
   <div class="d-flex w-100 justify-content-between">
     <h1 class="display-6">{{title}} &rarr;</h1>
   </div>
-  <p class="lead text-start"><i class="fas fa-user-astronaut"></i> {{user.username}}</p>
-  <small>
-    {{format_plural "comment" comments.length}}
-  </small>
+  <p class="lead">{{user.avatar}} {{user.username}}</p>
+  <p>
+    {{comments.length}} {{format_plural "comment" comments.length}}
+  </p>
 </a>

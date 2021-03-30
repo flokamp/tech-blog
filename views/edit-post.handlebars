@@ -8,7 +8,7 @@
         </div>
         <div class="mb-3">
           <label for="post-contents" class="form-label">Content</label>
-          <textarea class="form-control" name="post-contents" rows="12">{{post.contents}}</textarea>
+          <textarea class="form-control" name="post-contents" rows="12" data-emojiable="true">{{post.contents}}</textarea>
         </div>
         <button type="submit" class="btn btn-outline-danger delete-post-btn">Delete post</button>
         <button type="submit" class="btn btn-primary">Save post</button>
@@ -18,4 +18,3 @@
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>

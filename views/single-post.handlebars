@@ -4,16 +4,16 @@
   <div class="d-flex w-100 justify-content-between">
     <h4 class="display-6">{{post.title}}</h1>
   </div>
-  <p class="lead text-start">{{post.contents}}</p>
+  <p class="text-start">{{post.contents}}</p>
 
   {{#if loggedIn}}
-    <form class="comment-form">
-      <div class="form-group row mt-4 mb-4">
+    <form class="pt-2 comment-form">
+      <div class="row mt-4 mb-4">
         <div class="col">
-          <input type="text" class="form-control" name="comment-body" placeholder="Leave a comment...">
+          <input type="text" class="form-control form-control-lg" name="comment-body" placeholder="Leave a comment...">
         </div>
       <div class="col">
-        <button type="submit" class="btn btn-primary mb-2">Comment</button>
+        <button type="submit" class="btn btn-primary btn-lg mb-2">Comment</button>
       </div>
       </div>
     </form>
@@ -25,5 +25,4 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/reaction.js"></script>
 {{/if}}
