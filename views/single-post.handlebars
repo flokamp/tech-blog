@@ -1,4 +1,4 @@
-     <a class="btn btn-light m-2" href="/"> &larr; All posts</a>
+<a class="btn btn-light m-2" href="/"> &larr; All posts</a>
 
 <div class="p-5 list-group-item">
   <div class="d-flex w-100 justify-content-between">
@@ -6,26 +6,23 @@
   </div>
   <p class="lead text-start">{{post.contents}}</p>
 
-
-
-{{#if loggedIn}}
-<form class="comment-form">
-  <div class="form-group row mt-4 mb-4">
-  <div class="col">
-    <input type="text" class="form-control" name="comment-body" placeholder="Leave a comment...">
-  </div>
-   <div class="col">
-  <button type="submit" class="btn btn-primary mb-2">Comment</button>
-  </div>
-  </div>
-</form>
-{{/if}}
+  {{#if loggedIn}}
+    <form class="comment-form">
+      <div class="form-group row mt-4 mb-4">
+        <div class="col">
+          <input type="text" class="form-control" name="comment-body" placeholder="Leave a comment...">
+        </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary mb-2">Comment</button>
+      </div>
+      </div>
+    </form>
+  {{/if}}
 </div>
-<div class="pt-5">
-{{> comments post.comments}}
+<div>
+  {{> comments post.comments}}
 </div>
 
-</div>
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/reaction.js"></script>

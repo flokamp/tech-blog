@@ -15,39 +15,22 @@ main {
 	height: 100%;
 }
 
-/*************** header styling ***************/
-
-/* view posts styling */
-
-.title {
-	font-size: 1.4em;
-	margin-bottom: 12px;
-}
-
-.edit-link {
-	display: block;
-	margin: -1.5% 0 2% 0;
-}
-
-/* full post details */
-
-/* form interactions */
-
-/* create post styling */
-
-.edit-post-form {
-	margin-bottom: 5%;
-}
-
-/* login form */
-
-div.collapse {
-	text-align: right;
-	float: right;
-}
-
 .badge {
 	color: rgb(32, 32, 32);
 	background-color: rgb(230, 230, 230);
 	border-radius: 32px;
+}
+
+a#login.nav-link,
+#logout,
+a#dashboard.nav-link {
+	color: white;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+a.navbar-brand {
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 1%;
 }

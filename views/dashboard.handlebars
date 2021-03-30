@@ -1,7 +1,8 @@
- <div class="row" style="height: 100%;">
- <div class="col-4 p-0">  
-  <div class="sidebar-item bg-light p-5">
-      <form class="new-post-form pt-5">
+<div class="row" style="height: 100%;">
+  <div class="col-4 p-0">  
+    <div class="sidebar-item bg-light p-5">
+      <form class="new-post-form">
+        <h3 class="pb-4"> Create a new post </h3>
         <div class="mb-3">
           <label for="post-title" class="form-label">Blog title</label>
           <input type="text" class="form-control" name="post-title">
@@ -10,26 +11,25 @@
           <label for="post-contents" class="form-label">Content</label>
           <textarea id="mytextarea" class="form-control" name="post-contents" rows="12"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Create</button>
       </form>
-
   </div>
 </div>
- <div class="col-8 p-0 bg-white">  
-{{#each posts as |post|}}
-<a href="/dashboard/edit/{{post.id}}" class="p-5 list-group-item list-group-item-action">
-  <div class="d-flex w-100 justify-content-between">
-    <h5 class="mb-1">{{title}}</h5>
-   <i class="fas fa-pen"></i>
+  <div class="col-8 p-5 bg-white">
+    <h3 class="pb-4"> Your posts</h3>
+     <div class="pt-2">
+    {{#each posts as |post|}}
+      <a href="/dashboard/edit/{{post.id}}" class="p-5 list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{title}}</h5>
+          <i class="fas fa-pen"></i>
+        </div>
+      <p class="mb-1 text-start">{{contents}}</p>
+      <small>{{comments.length}} {{format_plural "comment" comments.length}}</small>
+      </a>
+    {{/each}}
+    </div>
   </div>
-  <p class="mb-1 text-start">{{contents}}</p>
-  <small>{{comments.length}} {{format_plural "comment" comments.length}}</small>
-</a>
-{{/each}}
-
-</div>
 </div>
 
-
- 
 <script src="/javascript/add-post.js"></script>
