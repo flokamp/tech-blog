@@ -37,7 +37,9 @@ async function signupFormHandler(event) {
 	const username = document.querySelector("#username-signup").value.trim();
 	const email = document.querySelector("#email-signup").value.trim();
 	const password = document.querySelector("#password-signup").value.trim();
-	const avatar = document.querySelector("#avatar-signup").value.trim();
+	const avatar = document
+		.querySelector('input[name="avatar-signup"]:checked')
+		.value.trim();
 
 	if (username && email && password && avatar) {
 		const response = await fetch("/api/users", {
