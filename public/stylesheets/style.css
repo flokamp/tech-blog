@@ -17,40 +17,7 @@ a {
 	transition: color 0.1s;
 }
 
-a:hover {
-	color: black;
-}
-
 /*************** header styling ***************/
-header {
-	background-color: rgb(58, 58, 58);
-	color: white;
-	padding: 0 8%;
-	font-size: 1em;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 32px;
-}
-
-header a {
-	color: white;
-}
-
-header a:hover {
-	color: rgb(190, 190, 190);
-}
-
-a#login {
-	font-weight: bold;
-	font-size: 20px;
-	border: 2px solid white;
-	padding: 4px 12px;
-}
-
-a#login:hover {
-	border: 2px solid rgb(190, 190, 190);
-}
 
 .btn-no-style {
 	background: none;
@@ -65,74 +32,7 @@ a#login:hover {
 	margin-left: 16px;
 }
 
-.btn-no-style:hover {
-	background: none;
-	color: rgb(190, 190, 190);
-}
-
-button {
-	width: 100%;
-	background-color: rgb(60, 153, 60);
-	border: 0;
-	padding: 1%;
-	color: white;
-	font-weight: bold;
-	transition: background-color 0.1s;
-	cursor: pointer;
-}
-
-button:hover {
-	background-color: green;
-	color: white;
-}
-
 /* view posts styling */
-.post-list {
-	border-radius: 8px;
-}
-
-main {
-	flex: 1;
-}
-
-.post {
-	padding: 2% 8% 1% 8%;
-	line-height: 150%;
-}
-
-.post:hover {
-	background-color: rgb(236, 243, 248);
-}
-
-textarea,
-input {
-	border-radius: 5px;
-	border: 1px solid #ccc;
-}
-
-textarea:focus,
-input:focus {
-	outline: none;
-	border: 1px solid #3486eb;
-}
-
-textarea {
-	min-width: 40%;
-	min-height: 72px;
-}
-
-form > div {
-	margin-bottom: 2%;
-}
-
-.wrapper {
-	width: 100%;
-	min-height: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-}
 
 .delete-post-btn {
 	background-color: white;
@@ -157,10 +57,6 @@ form > div {
 .post-full {
 	padding: 2% 12% 1% 12%;
 	line-height: 150%;
-}
-
-.post-details {
-	margin-bottom: 16px;
 }
 
 /* form interactions */
@@ -196,20 +92,11 @@ button.reaction:hover {
 .text {
 	flex: 1;
 }
+
 .meta {
 	font-size: 90%;
 	opacity: 0.8;
 	text-align: right;
-}
-
-hr {
-	border: 0.5px solid rgb(214, 214, 214);
-}
-
-.comment-count,
-.reaction-count {
-	padding-left: 12px;
-	display: inline-block;
 }
 
 .reaction-form {
@@ -222,16 +109,6 @@ hr {
 	padding: 2% 4%;
 }
 
-h2 {
-	font-size: 1em;
-	margin: 0 0 16px 0;
-}
-
-h3 {
-	font-size: 2em;
-	text-align: center;
-}
-
 p {
 	width: 100%;
 	font-size: 14px;
@@ -239,19 +116,8 @@ p {
 }
 
 label {
-	color: black;
 	font-size: 1em;
 	float: left;
-	text-align: left;
-	margin-bottom: 8px;
-}
-
-input#post-title {
-	height: 56px;
-	font-size: 1.6em;
-	width: 100%;
-	padding: 12px;
-	border: 2px solid rgb(209, 209, 209);
 }
 
 div.contents-preview {
@@ -261,14 +127,6 @@ div.contents-preview {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-textarea#post-contents {
-	font-family: sans-serif;
-	font-size: 1em;
-	width: 100%;
-	padding: 12px;
-	border: 2px solid rgb(209, 209, 209);
 }
 
 .edit-post-form {
@@ -290,11 +148,6 @@ footer {
 	width: 60%;
 	margin: 0 auto;
 }
-.login-form,
-.signup-form,
-.post-form {
-	padding: 8px;
-}
 
 .tabs {
 	padding-top: 32px;
@@ -312,8 +165,7 @@ footer {
 .signup-form div,
 .post-form {
 	margin: 0 auto;
-	text-align: center;
-	padding: 24px;
+	padding: 4% 10%;
 }
 
 .login-form input,
