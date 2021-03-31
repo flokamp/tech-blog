@@ -7,9 +7,7 @@
 
 Techblog is a CMS-style blog site where developers can create posts and comment on other posts. Users have a homepage to view all community posts and a dashboard to view their own posts, edit their posts and create new posts. The app follows the MVC paradigm in its architectural structure, uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
-![Screenshot](public/assets/images/login.png)
-![Screenshot](public/assets/images/homepage.png)
-![Screenshot](public/assets/images/dashboard.png)
+![Screenshot](public/assets/images/demo.gif)
 
 ## Contributing
 
